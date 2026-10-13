@@ -1,0 +1,471 @@
+/* Remove as margens do navegador e define a tipografia geral da página. */
+* {
+	box-sizing: border-box;
+}
+
+/* Mantém o conteúdo da página sem margem externa e com fundo neutro. */
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cria a faixa verde escura que forma o fundo do cabeçalho. */
+.site-header {
+	width: 100%;
+	min-height: 75px;
+	background-color: #073b2b;
+	color: #f7f5ef;
+}
+
+/* Alinha logotipo, área central e ações em três colunas. */
+.header-content {
+	display: grid;
+	grid-template-columns: 177px minmax(0, 1fr) 220px;
+	align-items: center;
+	gap: 16px;
+	width: min(86%, 1180px);
+	min-height: 75px;
+	margin: 0 auto;
+}
+
+/* Posiciona o logotipo à esquerda e limita sua largura. */
+.brand {
+	display: flex;
+	align-items: center;
+	width: 140px;
+}
+
+/* Exibe o arquivo do logotipo sem distorcer suas proporções. */
+.brand img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* Empilha busca e navegação, centralizando os dois elementos na coluna central. */
+.header-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-width: 0;
+	padding: 8px 0 6px;
+}
+
+/* Define a largura e o alinhamento do formulário de busca. */
+.site-search {
+	display: block;
+	width: min(100%, 430px);
+}
+
+/* Alinha o campo de texto e o botão dentro da caixa de busca. */
+.site-search form {
+	display: flex;
+	align-items: center;
+	height: 25px;
+	overflow: hidden;
+	border: 1px solid #d9d9d5;
+	border-radius: 5px;
+	background-color: #f8f8f6;
+}
+
+/* Faz o campo ocupar o espaço disponível e estiliza o texto de orientação. */
+.site-search input {
+	width: 100%;
+	min-width: 0;
+	height: 100%;
+	padding: 0 10px;
+	border: 0;
+	outline: 0;
+	background: transparent;
+	color: #292929;
+	font-size: 10px;
+}
+
+/* Mantém o botão de busca compacto e alinhado à direita do formulário. */
+.site-search button {
+	display: grid;
+	flex: 0 0 30px;
+	place-items: center;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+/* Define o tamanho do ícone de lupa dentro do botão de busca. */
+.site-search button img {
+	width: 13px;
+	height: 13px;
+}
+
+/* Ocupa a largura central e centraliza os links abaixo da busca. */
+.main-navigation {
+	width: 100%;
+}
+
+/* Distribui os links em uma linha e mantém o grupo centralizado. */
+.main-navigation ul {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 0 32px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Define a aparência dos links do menu principal. */
+.main-navigation a {
+	color: #f7f5ef;
+	font-size: 10px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+/* Alinha conta e carrinho à direita e separa as duas ações. */
+.header-actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	min-width: 0;
+}
+
+/* Apresenta cada ação com ícone e texto, usando divisórias verticais. */
+.header-actions a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-height: 22px;
+	padding: 0 14px;
+	border-left: 1px solid #9b8b4f;
+	color: #f7f5ef;
+	font-size: 10px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+/* Padroniza o tamanho dos ícones de conta e carrinho. */
+.header-actions img {
+	width: 18px;
+	height: 18px;
+}
+
+/* Preserva a proporção do banner para mostrar a foto e a coluna de benefícios inteiras. */
+.main-content-area1 {
+	display: flex;
+	align-items: center;
+	aspect-ratio: 4 / 1;
+	background-image: url("img/content-area1.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Posiciona a chamada sobre o espaço escuro à esquerda da foto. */
+.hero-copy {
+	width: min(34%, 360px);
+	margin-left: 8%;
+	color: #fff;
+}
+
+/* Dá destaque serifado ao título principal do banner. */
+.hero-copy h1 {
+	margin: 0 0 8px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 70px;
+	font-weight: 400;
+	line-height: 0.92;
+}
+
+/* Mantém o texto de apoio legível e compacto sob o título. */
+.hero-copy p {
+	max-width: 330px;
+	margin: 0 0 12px;
+	font-size: 14px;
+	line-height: 1.25;
+}
+
+/* Estiliza o link de cafés como o botão claro mostrado na referência. */
+.hero-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 16px;
+	border-radius: 20px;
+	background-color: #fff;
+	color: #171717;
+	font-size: 11px;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* Acrescenta a seta ao botão sem depender de outro arquivo de imagem. */
+.hero-button::after {
+	content: "→";
+	font-size: 16px;
+}
+
+.main-content-area2 {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	aspect-ratio: 4 / 1;
+	background-image: url("img/content-area2.jpeg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.hero-copy2 {
+	width: min(34%, 360px);
+	margin-right: 8%;
+	color: black;
+}
+
+.hero-copy2 h1 {
+	margin: 0 0 8px;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 70px;
+	font-weight: 400;
+	line-height: 1.09;
+	white-space: nowrap;
+	
+}
+
+.line-ajust {
+  border: none;              /* Remove a borda padrão */
+  height: 2px;               /* Espessura da linha */
+  background-color: #c9784b;    /* Cor da linha (ajuste conforme o tom do seu texto) */
+  width: 50px;               /* Largura curta da linha */
+  margin-left: 0;            /* Alinha totalmente à esquerda */
+  margin-top: 15px;          /* Espaçamento superior */
+  margin-bottom: 15px;       /* Espaçamento inferior */
+}
+
+.hero-copy2 p {
+	max-width: 330px;
+	margin: 0 0 12px;
+	font-size: 25px;
+	line-height: 1.25;
+}
+
+/* Alterna os benefícios em uma faixa compacta entre os banners principais. */
+#animated-banner {
+	display: grid;
+	min-height: 82px;
+	place-items: center;
+	padding: 12px 20px;
+	background-color: #F4EEE3;
+	color: #a94e29;
+}
+
+.banner-track {
+	display: grid;
+	width: min(100%, 560px);
+	min-height: 48px;
+	place-items: center;
+}
+
+.banner-message {
+	display: flex;
+	grid-area: 1 / 1;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	width: 100%;
+	min-height: 48px;
+	opacity: 0;
+	transform: translateY(8px);
+	transition: opacity 450ms ease, transform 450ms ease;
+	visibility: hidden;
+}
+
+.banner-message.is-active {
+	opacity: 1;
+	transform: translateY(0);
+	visibility: visible;
+}
+
+.banner-message img {
+	width: 34px;
+	height: 34px;
+	flex: 0 0 34px;
+}
+
+.banner-message p {
+	margin: 0;
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 20px;
+	text-align: center;
+}
+
+#animated-banner.reduced-motion .banner-track {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	width: min(100%, 1180px);
+	gap: 12px;
+}
+
+#animated-banner.reduced-motion .banner-message {
+	display: flex;
+	grid-area: auto;
+	gap: 8px;
+	opacity: 1;
+	transform: none;
+	visibility: visible;
+}
+
+#animated-banner.reduced-motion .banner-message img {
+	width: 26px;
+	height: 26px;
+	flex-basis: 26px;
+}
+
+#animated-banner.reduced-motion .banner-message p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Reorganiza o cabeçalho em telas menores sem esconder os links. */
+@media (max-width: 760px) {
+	.header-content {
+		grid-template-columns: 120px minmax(0, 1fr);
+		gap: 12px;
+		width: calc(100% - 28px);
+		padding: 10px 0;
+	}
+
+	/* Reduz a largura do logotipo para liberar espaço no cabeçalho móvel. */
+	.brand {
+		width: 110px;
+	}
+
+	/* Coloca as ações ao lado da marca na primeira linha em telas menores. */
+	.header-actions {
+		grid-column: 2;
+		grid-row: 1;
+	}
+
+	/* Faz busca e menu ocuparem uma linha completa abaixo da marca. */
+	.header-main {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		gap: 10px;
+	}
+
+	/* Expande a busca para a largura disponível no celular. */
+	.site-search {
+		width: 100%;
+	}
+
+	/* Reduz o espaçamento do menu para acomodar os links em telas estreitas. */
+	.main-navigation ul {
+		gap: 10px 20px;
+	}
+
+	/* Encurta as divisórias e o espaçamento das ações em telas menores. */
+	.header-actions a {
+		gap: 5px;
+		padding: 0 8px;
+		font-size: 9px;
+	}
+
+	/* Aumenta a altura do banner e enquadra a xícara em telas estreitas. */
+	.main-content-area1 {
+		min-height: 360px;
+		aspect-ratio: auto;
+		background-position: 38% center;
+		background-size: auto 100%;
+	}
+
+	/* Ajusta o texto do banner para caber sobre a imagem em telas menores. */
+	.hero-copy {
+		width: min(78%, 320px);
+		margin-left: 6%;
+	}
+
+	/* Reduz o título para evitar que ele ocupe a área da xícara. */
+	.hero-copy h1 {
+		font-size: 34px;
+	}
+
+	.main-content-area2 {
+		min-height: 360px;
+		aspect-ratio: auto;
+		background-position: 38% center;
+		background-size: auto 100%;
+	}
+
+	/* Ajusta o texto do banner para caber sobre a imagem em telas menores. */
+	.hero-copy2 {
+		width: min(80%, 320px);
+		margin-left: 6%;
+		color: white;
+	}
+
+	/* Reduz o título para evitar que ele ocupe a área da xícara. */
+	.hero-copy2 h1 {
+		font-size: 34px;
+	}
+
+	.hero-copy2 p {
+		max-width: 100%;
+		font-size: 16px;
+	line-height: 1.35;
+		white-space: normal;
+	}
+
+
+	/* Mantém os benefícios legíveis em duas colunas no modo de movimento reduzido. */
+	#animated-banner.reduced-motion .banner-track {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	#animated-banner.reduced-motion .banner-message {
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	#animated-banner.reduced-motion .banner-message p {
+		font-size: 11px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.banner-message {
+		transition: none;
+	}
+}
+
+/* Empilha marca e ações quando a largura é insuficiente para mantê-las juntas. */
+@media (max-width: 380px) {
+	.header-content {
+		grid-template-columns: 1fr;
+	}
+
+	/* Mantém conta e carrinho alinhados à esquerda abaixo da marca. */
+	.header-actions {
+		grid-column: 1;
+		grid-row: 2;
+		justify-content: flex-start;
+	}
+
+	/* Desloca a busca e a navegação para depois das ações empilhadas. */
+	.header-main {
+		grid-row: 3;
+	}
+}

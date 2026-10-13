@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saviri - Cafes Especiais - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/animated-banner.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+
+        <div class="header-content">
+
+            <a class="brand" href="index.html" aria-label="Saviri, página inicial">
+                <img src="img/header-logo_Image.png" alt="Saviri Cafés Especiais">
+            </a>
+
+            <div class="header-main">
+                <search class="site-search">
+                    <form action="/buscar" method="get">
+                        <input type="search" id="campo-busca" name="q" placeholder="O que você procura?" aria-label="O que você procura?">
+                        <button type="submit" aria-label="Buscar">
+                            <img src="img/icones/search-icon.svg" alt="">
+                        </button>
+                    </form>
+                </search>
+
+                <nav class="main-navigation" aria-label="Navegação principal">
+                    <ul>
+                        <li><a href="Pagina-cafes">Cafés</a></li>
+                        <li><a href="Pagina-kits">Kits</a></li>
+                        <li><a href="Pagina-métodos">Métodos</a></li>
+                        <li><a href="Pagina-acessorios">Acessórios</a></li>
+                        <li><a href="Pagina-clube">Clube Saviri</a></li>
+                        <li><a href="Pagina-Aprenda">Aprenda</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header-actions">
+                <a href="/conta">
+                    <img src="img/icones/user-icon.svg" alt="">
+                    <span>Minha conta</span>
+                </a>
+                <a href="/carrinho">
+                    <img src="img/icones/shopping-cart-icon.svg" alt="">
+                    <span>Carrinho</span>
+                </a>
+            </div>
+
+        </div>
+        
+    </header>
+
+    <main>
+        <section class="main-content-area1" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <h1 id="hero-title">Café bom<br>não precisa ser<br>complicado.</h1>
+                <p>Descubra cafés especiais selecionados e tudo que você precisa para preparar uma xícara melhor em casa.</p>
+                <a class="hero-button" href="Pagina-cafes">Conheça nossos cafés</a>
+            </div>
+        </section>
+
+        <section id="animated-banner" aria-label="Benefícios Saviri">
+            <div class="banner-track" aria-live="polite" aria-atomic="true">
+                <div class="banner-message is-active" aria-hidden="false">
+                    <img src="img/icones-animated-banner/leaf-icon.svg" alt="">
+                    <p>Cafés Especiais</p>
+                </div>
+                <div class="banner-message" aria-hidden="true">
+                    <img src="img/icones-animated-banner/shipping-car-svgrepo-com.svg" alt="">
+                    <p>Enviamos para todo o Brasil</p>
+                </div>
+                <div class="banner-message" aria-hidden="true">
+                    <img src="img/icones-animated-banner/card-credit-debit.svg" alt="">
+                    <p>Pagamento seguro</p>
+                </div>
+                <div class="banner-message" aria-hidden="true">
+                    <img src="img/icones-animated-banner/leaf-icon.svg" alt="">
+                    <p>Produto sustentável</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-content-area2" aria-labelledby="hero-title">
+            <div class="hero-copy2">
+                <h1 id="hero-title2">Quatro perfis.<br> Um mesmo<br>propósito.</h1>
+                <hr class="line-ajust">
+                <p>Experiências únicas em cada xícara,<br> para todos os momentos do seu dia.</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
