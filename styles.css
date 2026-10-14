@@ -1,15 +1,21 @@
-/* Remove as margens do navegador e define a tipografia geral da página. */
+/* Reset e base */
 * {
 	box-sizing: border-box;
 }
 
-/* Mantém o conteúdo da página sem margem externa e com fundo neutro. */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Cria a faixa verde escura que forma o fundo do cabeçalho. */
+/* Layout do cabeçalho */
 .site-header {
 	width: 100%;
 	min-height: 75px;
@@ -17,7 +23,6 @@ body {
 	color: #f7f5ef;
 }
 
-/* Alinha logotipo, área central e ações em três colunas. */
 .header-content {
 	display: grid;
 	grid-template-columns: 177px minmax(0, 1fr) 220px;
@@ -28,21 +33,18 @@ body {
 	margin: 0 auto;
 }
 
-/* Posiciona o logotipo à esquerda e limita sua largura. */
 .brand {
 	display: flex;
 	align-items: center;
 	width: 140px;
 }
 
-/* Exibe o arquivo do logotipo sem distorcer suas proporções. */
 .brand img {
 	display: block;
 	width: 100%;
 	height: auto;
 }
 
-/* Empilha busca e navegação, centralizando os dois elementos na coluna central. */
 .header-main {
 	display: flex;
 	flex-direction: column;
@@ -53,13 +55,11 @@ body {
 	padding: 8px 0 6px;
 }
 
-/* Define a largura e o alinhamento do formulário de busca. */
 .site-search {
 	display: block;
 	width: min(100%, 430px);
 }
 
-/* Alinha o campo de texto e o botão dentro da caixa de busca. */
 .site-search form {
 	display: flex;
 	align-items: center;
@@ -70,7 +70,6 @@ body {
 	background-color: #f8f8f6;
 }
 
-/* Faz o campo ocupar o espaço disponível e estiliza o texto de orientação. */
 .site-search input {
 	width: 100%;
 	min-width: 0;
@@ -83,7 +82,6 @@ body {
 	font-size: 10px;
 }
 
-/* Mantém o botão de busca compacto e alinhado à direita do formulário. */
 .site-search button {
 	display: grid;
 	flex: 0 0 30px;
@@ -95,18 +93,15 @@ body {
 	cursor: pointer;
 }
 
-/* Define o tamanho do ícone de lupa dentro do botão de busca. */
 .site-search button img {
 	width: 13px;
 	height: 13px;
 }
 
-/* Ocupa a largura central e centraliza os links abaixo da busca. */
 .main-navigation {
 	width: 100%;
 }
 
-/* Distribui os links em uma linha e mantém o grupo centralizado. */
 .main-navigation ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -118,15 +113,6 @@ body {
 	list-style: none;
 }
 
-/* Define a aparência dos links do menu principal. */
-.main-navigation a {
-	color: #f7f5ef;
-	font-size: 10px;
-	text-decoration: none;
-	white-space: nowrap;
-}
-
-/* Alinha conta e carrinho à direita e separa as duas ações. */
 .header-actions {
 	display: flex;
 	align-items: center;
@@ -134,7 +120,6 @@ body {
 	min-width: 0;
 }
 
-/* Apresenta cada ação com ícone e texto, usando divisórias verticais. */
 .header-actions a {
 	display: flex;
 	align-items: center;
@@ -148,13 +133,20 @@ body {
 	white-space: nowrap;
 }
 
-/* Padroniza o tamanho dos ícones de conta e carrinho. */
 .header-actions img {
 	width: 18px;
 	height: 18px;
 }
 
-/* Preserva a proporção do banner para mostrar a foto e a coluna de benefícios inteiras. */
+/* Tipografia do cabeçalho */
+.main-navigation a {
+	color: #f7f5ef;
+	font-size: 10px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+/* Layout dos banners */
 .main-content-area1 {
 	display: flex;
 	align-items: center;
@@ -165,49 +157,10 @@ body {
 	background-size: cover;
 }
 
-/* Posiciona a chamada sobre o espaço escuro à esquerda da foto. */
 .hero-copy {
-	width: min(34%, 360px);
-	margin-left: 8%;
+	width: min(90%, 440px);
+	margin-left: 6%;
 	color: #fff;
-}
-
-/* Dá destaque serifado ao título principal do banner. */
-.hero-copy h1 {
-	margin: 0 0 8px;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: 70px;
-	font-weight: 400;
-	line-height: 0.92;
-}
-
-/* Mantém o texto de apoio legível e compacto sob o título. */
-.hero-copy p {
-	max-width: 330px;
-	margin: 0 0 12px;
-	font-size: 14px;
-	line-height: 1.25;
-}
-
-/* Estiliza o link de cafés como o botão claro mostrado na referência. */
-.hero-button {
-	display: inline-flex;
-	align-items: center;
-	gap: 10px;
-	padding: 8px 16px;
-	border-radius: 20px;
-	background-color: #fff;
-	color: #171717;
-	font-size: 11px;
-	font-weight: 700;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-/* Acrescenta a seta ao botão sem depender de outro arquivo de imagem. */
-.hero-button::after {
-	content: "→";
-	font-size: 16px;
 }
 
 .main-content-area2 {
@@ -222,29 +175,59 @@ body {
 }
 
 .hero-copy2 {
-	width: min(34%, 360px);
-	margin-right: 8%;
-	color: black;
+	width: min(90%, 440px);
+	min-height: 0;
+	padding-right: 150px;
+	font-size: 27px;
+	color: #f4eee3;
+}
+
+/* Tipografia dos banners */
+.hero-copy h1,
+.hero-copy2 h1 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 400;
+	line-height: 0.98;
+	text-shadow: 0 2px 8px rgb(0 0 0 / 22%);
+}
+
+.hero-copy h1 {
+	margin: 0 0 8px;
+	font-size: clamp(34px, 8vw, 48px);
+}
+
+.hero-copy p {
+	max-width: 330px;
+	margin: 0 0 12px;
+	font-size: 14px;
+	line-height: 1.25;
+	text-shadow: 0 2px 8px rgb(0 0 0 / 22%);
 }
 
 .hero-copy2 h1 {
-	margin: 0 0 8px;
-	font-family: Georgia, "Times New Roman", serif;
-	font-size: 70px;
-	font-weight: 400;
-	line-height: 1.09;
-	white-space: nowrap;
-	
+	white-space: normal;
+	overflow-wrap: anywhere;
+	font-size: clamp(34px, 8vw, 48px);
 }
 
 .line-ajust {
-  border: none;              /* Remove a borda padrão */
-  height: 2px;               /* Espessura da linha */
-  background-color: #c9784b;    /* Cor da linha (ajuste conforme o tom do seu texto) */
-  width: 50px;               /* Largura curta da linha */
-  margin-left: 0;            /* Alinha totalmente à esquerda */
-  margin-top: 15px;          /* Espaçamento superior */
-  margin-bottom: 15px;       /* Espaçamento inferior */
+	border: none;
+	height: 2px;
+	background-color: #c9784b;
+	width: 50px;
+	margin-left: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.line-ajust2 {
+	border: none;
+	height: 2px;
+	background-color: #c9784b;
+	width: 50px;
+	margin-left: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .hero-copy2 p {
@@ -252,37 +235,74 @@ body {
 	margin: 0 0 12px;
 	font-size: 25px;
 	line-height: 1.25;
+	color: #f4eee3;
+	text-shadow: 0 1px 4px rgb(0 0 0 / 18%);
 }
 
-/* Alterna os benefícios em uma faixa compacta entre os banners principais. */
+.hero-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 16px;
+	border-radius: 20px;
+	background-color: #fff;
+	color: #171717;
+	font-size: 11px;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0 2px 8px rgb(0 0 0 / 22%);
+}
+
+.hero-button::after {
+	content: "→";
+	font-size: 16px;
+}
+
+
+
+
+.main-content-area3{
+	
+}
+
+.club-highlights {
+	display: flex;
+}
+/* Barra de benefícios */
 #animated-banner {
-	display: grid;
+	display: flex;
+	align-items: center;
 	min-height: 82px;
-	place-items: center;
-	padding: 12px 20px;
-	background-color: #F4EEE3;
+	overflow: hidden;
+	padding: 12px 0;
+	background-color: #f4eee3;
 	color: #a94e29;
 }
 
 .banner-track {
-	display: grid;
-	width: min(100%, 560px);
-	min-height: 48px;
-	place-items: center;
+	display: flex;
+	width: max-content;
+	animation: banner-scroll 24s linear infinite;
+	will-change: transform;
+}
+
+.banner-group {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 10rem;
+	padding: 0 1.5rem;
 }
 
 .banner-message {
 	display: flex;
-	grid-area: 1 / 1;
+	flex: 0 0 auto;
 	align-items: center;
-	justify-content: center;
-	gap: 14px;
-	width: 100%;
+	gap: 15px;
 	min-height: 48px;
-	opacity: 0;
-	transform: translateY(8px);
-	transition: opacity 450ms ease, transform 450ms ease;
-	visibility: hidden;
+	opacity: 1;
+	visibility: visible;
 }
 
 .banner-message.is-active {
@@ -301,46 +321,60 @@ body {
 	margin: 0;
 	font-family: Georgia, "Times New Roman", serif;
 	font-size: 20px;
-	text-align: center;
+	white-space: nowrap;
 }
 
 #animated-banner.reduced-motion .banner-track {
-	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
+	width: 100%;
+	justify-content: center;
+	animation: none;
+}
+
+#animated-banner.reduced-motion .banner-group {
+	flex-wrap: wrap;
+	justify-content: center;
 	width: min(100%, 1180px);
-	gap: 12px;
+	gap: 12px 24px;
+	padding: 0 12px;
 }
 
-#animated-banner.reduced-motion .banner-message {
-	display: flex;
-	grid-area: auto;
-	gap: 8px;
-	opacity: 1;
-	transform: none;
-	visibility: visible;
+#animated-banner .banner-group {
+    gap: 0;
+    padding-right: 0;
 }
 
-#animated-banner.reduced-motion .banner-message img {
-	width: 26px;
-	height: 26px;
-	flex-basis: 26px;
+#animated-banner .banner-message {
+    box-sizing: border-box;
+    flex: 0 0 clamp(280px, 25vw, 360px);
+    justify-content: center;
+    padding: 0 12px;
 }
 
-#animated-banner.reduced-motion .banner-message p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
+@media (max-width: 760px) {
+	#animated-banner.reduced-motion .banner-message {
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	#animated-banner.reduced-motion .banner-message img {
+		width: 26px;
+		height: 26px;
+		flex-basis: 26px;
+	}
+
+	#animated-banner.reduced-motion .banner-message p {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 11px;
+	}
 }
 
+@media (prefers-reduced-motion: reduce) {
+	#animated-banner .banner-track {
+		animation: none;
+	}
+}
 
-
-
-
-
-
-
-
-
-/* Reorganiza o cabeçalho em telas menores sem esconder os links. */
+/* Layout responsivo */
 @media (max-width: 760px) {
 	.header-content {
 		grid-template-columns: 120px minmax(0, 1fr);
@@ -349,42 +383,35 @@ body {
 		padding: 10px 0;
 	}
 
-	/* Reduz a largura do logotipo para liberar espaço no cabeçalho móvel. */
 	.brand {
 		width: 110px;
 	}
 
-	/* Coloca as ações ao lado da marca na primeira linha em telas menores. */
 	.header-actions {
 		grid-column: 2;
 		grid-row: 1;
 	}
 
-	/* Faz busca e menu ocuparem uma linha completa abaixo da marca. */
 	.header-main {
 		grid-column: 1 / -1;
 		grid-row: 2;
 		gap: 10px;
 	}
 
-	/* Expande a busca para a largura disponível no celular. */
 	.site-search {
 		width: 100%;
 	}
 
-	/* Reduz o espaçamento do menu para acomodar os links em telas estreitas. */
 	.main-navigation ul {
 		gap: 10px 20px;
 	}
 
-	/* Encurta as divisórias e o espaçamento das ações em telas menores. */
 	.header-actions a {
 		gap: 5px;
 		padding: 0 8px;
 		font-size: 9px;
 	}
 
-	/* Aumenta a altura do banner e enquadra a xícara em telas estreitas. */
 	.main-content-area1 {
 		min-height: 360px;
 		aspect-ratio: auto;
@@ -392,56 +419,48 @@ body {
 		background-size: auto 100%;
 	}
 
-	/* Ajusta o texto do banner para caber sobre a imagem em telas menores. */
 	.hero-copy {
 		width: min(78%, 320px);
 		margin-left: 6%;
 	}
 
-	/* Reduz o título para evitar que ele ocupe a área da xícara. */
 	.hero-copy h1 {
 		font-size: 34px;
 	}
 
 	.main-content-area2 {
+		width: 100%;
+		min-width: 0;
 		min-height: 360px;
 		aspect-ratio: auto;
-		background-position: 38% center;
-		background-size: auto 100%;
+		overflow: hidden;
+		background-position: center;
+		background-size: cover;
 	}
 
-	/* Ajusta o texto do banner para caber sobre a imagem em telas menores. */
 	.hero-copy2 {
-		width: min(80%, 320px);
-		margin-left: 6%;
-		color: white;
+		width: min(88%, 320px);
+		min-width: 0;
+		margin: 0 6% 0 auto;
+		padding-right: 0;
 	}
 
-	/* Reduz o título para evitar que ele ocupe a área da xícara. */
 	.hero-copy2 h1 {
-		font-size: 34px;
+		margin: 0;
+		font-size: clamp(28px, 8vw, 34px);
+		line-height: 1;
+		overflow-wrap: normal;
 	}
 
 	.hero-copy2 p {
 		max-width: 100%;
 		font-size: 16px;
-	line-height: 1.35;
+		line-height: 1.35;
 		white-space: normal;
 	}
 
-
-	/* Mantém os benefícios legíveis em duas colunas no modo de movimento reduzido. */
 	#animated-banner.reduced-motion .banner-track {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	#animated-banner.reduced-motion .banner-message {
-		flex-direction: column;
-		gap: 6px;
-	}
-
-	#animated-banner.reduced-motion .banner-message p {
-		font-size: 11px;
 	}
 }
 
@@ -451,21 +470,20 @@ body {
 	}
 }
 
-/* Empilha marca e ações quando a largura é insuficiente para mantê-las juntas. */
 @media (max-width: 380px) {
 	.header-content {
 		grid-template-columns: 1fr;
 	}
 
-	/* Mantém conta e carrinho alinhados à esquerda abaixo da marca. */
 	.header-actions {
 		grid-column: 1;
 		grid-row: 2;
 		justify-content: flex-start;
 	}
 
-	/* Desloca a busca e a navegação para depois das ações empilhadas. */
 	.header-main {
 		grid-row: 3;
 	}
 }
+
+
