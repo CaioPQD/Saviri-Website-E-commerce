@@ -184,7 +184,8 @@ body {
 
 /* Tipografia dos banners */
 .hero-copy h1,
-.hero-copy2 h1 {
+.hero-copy2 h1,
+.hero-copy3 h2 {
 	font-family: Georgia, "Times New Roman", serif;
 	font-weight: 400;
 	line-height: 0.98;
@@ -261,14 +262,166 @@ body {
 
 
 
-
+/* conteudo 3 - club e beneficios */
 .main-content-area3{
-	
+	display: flex;
+	align-items: flex-start;
+	gap: clamp(36px, 3vw, 60px);
+	min-height: clamp(340px, 28vw, 500px);
+	padding: clamp(48px, 5vw, 88px) clamp(24px, 4.5vw, 86px);
+	background: url("img/content-area3.jpeg") center / cover no-repeat;
+	letter-spacing: 0.8px;
+	position: relative;
 }
-
+.line-ajust2{
+	margin-inline: auto;
+}
+.hero-title3{
+	padding-left: 0;
+	margin-bottom: 0px;
+	font-size: clamp(27px, 2vw, 34px);
+	line-height: 1.1;
+}
+.hero-copy3{
+	flex: 0 0 min(300px, 28vw);
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: center;
+}
+.hero-copy3 p{
+	padding-left: 0;
+	margin-bottom: 1px;
+	font-size: clamp(17px, 1vw, 19px);
+	line-height: 1.45;
+}
+.p-bottom{
+	padding-left: 0;
+	margin-top: 1px;
+	padding-bottom: 10px;
+	font-size: clamp(16px, 0.95vw, 18px) !important;
+}
+.p-bottom-space{
+	margin: 0;
+	padding-left: 0;
+	font-size: clamp(16px, 0.95vw, 18px) !important;
+}
+.hero-button2{
+	--hero-button-align-self: center;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	align-self: var(--hero-button-align-self);
+	margin: 20px 0 0;
+	min-height: 56px;
+	padding: 14px 42px;
+	color: white;
+	text-decoration: none;
+	width: min(230px, 100%);
+	background-color: #29170d;
+	border-radius: 20px;
+	font-size: clamp(14px, 0.85vw, 16px);
+	line-height: 1.2;
+	text-align: center;
+	white-space: nowrap;
+}
+.hero-button2 img{
+	position: absolute;
+	top: 50%;
+	right: 16px;
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	transform: translateY(-50%);
+}
 .club-highlights {
 	display: flex;
+	flex: 1;
+	align-items: stretch;
+	gap: clamp(12px, 1.6vw, 24px);
+	margin-top: clamp(24px, 3vw, 36px);
 }
+.club-highlights img{
+	display: block;
+	width: clamp(32px, 2.2vw, 40px);
+	margin: 0 auto;
+}
+
+.highlight-title1,
+.highlight-title2,
+.highlight-title3 {
+	padding-left: 0;
+}
+
+.club-highlights1,
+.club-highlights2,
+.club-highlights3 {
+	display: flex;
+	flex: 0 1 clamp(150px, 9.5vw, 190px);
+	flex-direction: column;
+	align-items: center;
+	min-width: 0;
+	min-height: 168px;
+	background-color: #f4eee3;
+	padding: 18px 12px;
+	margin: 0;
+	border-radius: 14px;
+	text-align: center;
+}
+
+.club-highlights h3{
+	margin: 10px 0 5px;
+	font-size: clamp(14px, 1vw, 17px);
+	line-height: 1.25;
+}
+
+.club-highlights p{
+	margin: 0;
+	font-size: clamp(11px, 0.8vw, 14px);
+	line-height: 1.35;
+}
+
+.highlight-P3{
+	font-size: clamp(11px, 0.8vw, 14px) !important;
+}
+
+@media (max-width: 780px) {
+	.main-content-area3{
+		flex-direction: column;
+		gap: 30px;
+		min-height: 0;
+		padding: 48px 24px;
+	}
+
+	.hero-copy3{
+		flex-basis: auto;
+		width: min(100%, 420px);
+	}
+
+	.hero-title3{
+		font-size: clamp(26px, 4vw, 32px);
+	}
+
+	.club-highlights{
+		flex-wrap: wrap;
+		gap: 16px;
+		width: min(100%, 420px);
+		margin-top: 0;
+	}
+
+	.club-highlights1,
+	.club-highlights2,
+	.club-highlights3{
+		flex: 1 1 calc((100% - 32px) / 3);
+		min-height: 150px;
+	}
+}
+
 /* Barra de benefícios */
 #animated-banner {
 	display: flex;
