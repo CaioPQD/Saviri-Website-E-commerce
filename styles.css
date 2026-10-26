@@ -44,6 +44,16 @@ body {
 	margin: 0 auto;
 }
 
+/* Esconde o botão hambúrguer no cabeçalho desktop. */
+.menu-toggle {
+	display: none; /* Oculta o controle móvel em telas grandes. */
+}
+
+/* Mantém ações e conteúdo como itens independentes da grade desktop. */
+.header-menu {
+	display: contents; /* Preserva a disposição de busca, navegação e ações em colunas. */
+}
+
 .brand {
 	display: flex;
 	align-items: center;
@@ -57,6 +67,8 @@ body {
 }
 
 .header-main {
+	grid-column: 2; /* Alinha busca e navegação na coluna central do cabeçalho desktop. */
+	grid-row: 1; /* Mantém busca e navegação na mesma linha da logo e das ações no desktop. */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -125,6 +137,8 @@ body {
 }
 
 .header-actions {
+	grid-column: 3; /* Mantém os links de conta e carrinho na coluna direita desktop. */
+	grid-row: 1; /* Mantém os links alinhados à logo e evita uma linha extra no desktop. */
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -212,14 +226,12 @@ body {
 	margin-left: 7%;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	color: #fff;
+	color: #f4eee3;
 }
-
 
 #hero-title{
 	font-size: 65px;
 }
-
 
 .main-content-area2 {
 	display: flex;
@@ -518,12 +530,6 @@ body {
 }
 
 
-
-
-
-
-
-
 .main-content-area4{
 	color: white;
 	display: flex;
@@ -542,6 +548,7 @@ body {
 
 .hero-copy4 {
 	margin-bottom: 10px;
+	color: #f4eee3;
 }
 
 .hero-copy4 h1{
@@ -618,6 +625,7 @@ footer,
 	padding: 0;
 }
 
+
 .footer-brand,
 .footer-column{
 	justify-content: flex-start;
@@ -627,17 +635,22 @@ footer,
 .footer-brand{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	text-align: center;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.footer-brand h2{
+	margin-bottom: 12px;
 }
 
 .footer-brand ul{
-	align-items: center;
+	align-items: flex-start;
+	margin-top: 0;
 }
 
 .footer-brand a{
-	margin-left: 0;
-	text-align: center;
+	margin-left: -8px;
+	text-align: left;
 }
 
 .footer-brand a,
@@ -657,8 +670,8 @@ footer,
 }
 
 .footer-brand a{
-	margin-left: 0;
-	text-align: center;
+	margin-left: -8px;
+	text-align: left;
 }
 
 .footer-brand a:hover,
@@ -740,6 +753,7 @@ footer,
 @media (max-width: 780px) {
 	.main-content-area3{
 		flex-direction: column;
+		align-items: center;
 		gap: 30px;
 		min-height: 0;
 		padding: 48px 24px;
@@ -759,6 +773,7 @@ footer,
 		gap: 16px;
 		width: min(100%, 420px);
 		margin-top: 0;
+		justify-content: center;
 	}
 
 	.club-highlights1,
@@ -806,6 +821,8 @@ footer,
 
 	.footer-brand{
 		grid-column: 1 / -1;
+		width: 100%;
+		padding-inline: 30px;
 	}
 
 	.footer-brand ul{
@@ -825,6 +842,18 @@ footer,
 	.footer-bottom{
 		font-size: 12px;
 		line-height: 1.5;
+	}
+
+	.footer-logo{
+		justify-self: center;
+		width: calc(100% - 40px);
+		min-width: 0;
+	}
+
+	.footer-social-links{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
 	}
 }
 
@@ -959,6 +988,26 @@ footer,
 	}
 }
 
+@media (min-width: 761px) and (max-width: 980px) {
+	.main-content-area3 {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hero-copy3 {
+		flex-basis: auto;
+		width: min(100%, 420px);
+	}
+
+	.club-highlights {
+		flex: 0 1 auto;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: min(100%, 600px);
+		margin-top: 24px;
+	}
+}
+
 @media (min-width: 420px) and (max-width: 520px) {
 	.main-navigation ul {
 		gap: 4px 8px;
@@ -976,53 +1025,125 @@ footer,
 }
 
 /* Layout responsivo */
-@media (max-width: 760px) {
-	.header-content {
-		grid-template-columns: 120px minmax(0, 1fr);
-		gap: 12px;
-		width: calc(100% - 28px);
-		padding: 10px 0;
-	}
-
-	.brand {
-		width: 120px;
-	}
-
-	.header-actions {
-		grid-column: 2;
-		grid-row: 1;
-	}
-
-	.header-main {
-		grid-column: 1 / -1;
-		grid-row: 2;
-		gap: 10px;
-	}
-
-	.site-search {
-		width: 100%;
-	}
-
-	.main-navigation ul {
-		gap: 10px 20px;
-	}
-
-	.header-actions a {
-		gap: 6px;
-		min-height: 34px;
-		padding: 6px 8px;
-		font-size: 10px;
-	}
-
-	.header-actions img {
-		width: 19px;
-		height: 19px;
-		flex-basis: 19px;
-	}
-
+@media (max-width: 1200px) {
 	.main-content-area1 {
 		min-height: 360px;
 		aspect-ratio: auto;
+	}
+
+	#hero-title {
+		font-size: clamp(38px, 5.1vw, 56px);
+	}
+}
+
+@media (max-width: 1200px) {
+	/* Organiza o cabeçalho móvel em uma faixa da marca e outra do menu expansível. */
+	.header-content {
+		grid-template-columns: 44px minmax(0, 1fr) 44px; /* Reserva laterais iguais para centralizar a marca. */
+		grid-template-areas: "toggle brand spacer" "menu menu menu"; /* Posiciona o hambúrguer, a marca e o menu em linhas distintas. */
+		gap: 0; /* Remove o espaço entre a marca e a área que abre abaixo dela. */
+		width: calc(100% - 28px); /* Mantém margens laterais iguais no cabeçalho móvel. */
+		padding: 8px 0; /* Cria respiro vertical ao redor da faixa superior. */
+	}
+
+	/* Desenha o botão de três linhas à esquerda da marca. */
+	.menu-toggle {
+		display: flex; /* Exibe e empilha as três linhas do botão. */
+		grid-area: toggle; /* Coloca o botão na primeira coluna da faixa superior. */
+		flex-direction: column; /* Organiza as linhas horizontalmente empilhadas. */
+		align-items: center; /* Centraliza as linhas dentro do botão. */
+		justify-content: center; /* Centraliza verticalmente as linhas do botão. */
+		gap: 5px; /* Separa visualmente cada linha do ícone. */
+		width: 40px; /* Define a largura da área clicável. */
+		height: 40px; /* Define a altura da área clicável. */
+		padding: 8px; /* Mantém uma área clicável confortável ao redor das linhas. */
+		border: 0; /* Remove a borda padrão do botão. */
+		background: transparent; /* Mantém o fundo integrado ao cabeçalho verde. */
+		cursor: pointer; /* Indica que o botão pode ser acionado. */
+	}
+
+	/* Estiliza cada traço do ícone hambúrguer. */
+	.menu-toggle span {
+		display: block; /* Faz cada linha ocupar uma faixa própria. */
+		width: 22px; /* Define o comprimento das linhas do ícone. */
+		height: 2px; /* Define a espessura das linhas do ícone. */
+		border-radius: 2px; /* Suaviza as pontas de cada linha. */
+		background-color: #f7f5ef; /* Dá contraste ao ícone sobre o cabeçalho. */
+	}
+
+	/* Centraliza a marca na faixa superior, independentemente do botão lateral. */
+	.brand {
+		grid-area: brand; /* Posiciona a logo na coluna central da faixa superior. */
+		justify-self: center; /* Centraliza a logo horizontalmente. */
+		width: min(120px, 100%); /* Limita a logo sem exceder o espaço disponível. */
+	}
+
+	/* Exibe as seções do menu somente quando o botão for acionado. */
+	.header-menu {
+		display: flex; /* Mantém as opções do menu organizadas em coluna. */
+		grid-area: menu; /* Faz o menu expandido ocupar uma linha abaixo da marca. */
+		flex-direction: column; /* Empilha as opções na ordem vertical desejada. */
+		gap: 10px; /* Separa as opções do menu aberto. */
+		width: 100%; /* Usa toda a largura interna do cabeçalho. */
+		max-height: 0; /* Mantém o conteúdo recolhido antes de abrir o menu. */
+		overflow: hidden; /* Esconde o conteúdo enquanto o menu está recolhido. */
+		padding-top: 0; /* Remove o espaço superior enquanto o menu está fechado. */
+		opacity: 0; /* Suaviza a aparição do conteúdo durante a abertura. */
+		visibility: hidden; /* Impede foco em links enquanto o menu está fechado. */
+		transition: max-height 300ms ease, padding-top 300ms ease, opacity 300ms ease, visibility 300ms ease; /* Anima a abertura e o fechamento em 0,3 segundo. */
+	}
+
+	/* Mostra o conteúdo do menu quando o estado acessível do cabeçalho está aberto. */
+	.site-header.is-menu-open .header-menu {
+		max-height: 300px; /* Expande o espaço para os links, busca e navegação. */
+		padding-top: 10px; /* Cria espaço entre a faixa da marca e o menu aberto. */
+		opacity: 1; /* Deixa o conteúdo visível ao final da transição. */
+		visibility: visible; /* Libera o acesso aos links enquanto o menu está aberto. */
+	}
+
+	/* Centraliza os links de conta e carrinho na primeira linha do menu. */
+	.header-actions {
+		justify-content: center; /* Agrupa os links de conta e carrinho ao centro. */
+	}
+
+	/* Coloca a busca e a navegação abaixo dos links de conta e carrinho. */
+	.header-main {
+		flex-direction: column; /* Mantém busca antes das opções de navegação. */
+		gap: 10px; /* Separa a barra de busca da navegação. */
+	}
+
+	/* Faz a barra de pesquisa ocupar a largura disponível no menu. */
+	.site-search {
+		width: 100%; /* Estende a busca por toda a largura interna do cabeçalho. */
+	}
+
+	/* Distribui os links do cabeçalho em linhas, preservando a ordem existente. */
+	.main-navigation ul {
+		gap: 10px 20px; /* Espaça os links horizontalmente e as linhas verticalmente. */
+	}
+
+	.header-actions a {
+		gap: 6px; /* Aproxima o ícone do texto nos links de conta e carrinho. */
+		min-height: 34px; /* Mantém altura confortável para tocar nos links. */
+		padding: 6px 8px; /* Ajusta o espaço interno dos links em telas pequenas. */
+		font-size: 10px; /* Reduz o texto dos links para caber no cabeçalho móvel. */
+	}
+
+	.header-actions img {
+		width: 19px; /* Reduz a largura dos ícones de conta e carrinho no celular. */
+		height: 19px; /* Reduz a altura dos ícones de conta e carrinho no celular. */
+		flex-basis: 19px; /* Reserva a mesma largura para cada ícone no menu. */
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.header-menu {
+		transition: none; /* Desativa a animação do menu para quem prefere menos movimento. */
+	}
+}
+
+@media (max-width: 760px) {
+	.main-content-area1 {
 		background-position: 38% center;
 		background-size: auto 100%;
 	}
@@ -1032,8 +1153,8 @@ footer,
 		margin-left: 6%;
 	}
 
-	.hero-copy h1 {
-		font-size: 34px;
+	#hero-title {
+		font-size: clamp(32px, 10vw, 38px);
 	}
 
 	.main-content-area2 {
@@ -1098,17 +1219,4 @@ footer,
 		gap: 12px;
 	}
 
-	.header-content {
-		grid-template-columns: 1fr;
-	}
-
-	.header-actions {
-		grid-column: 1;
-		grid-row: 2;
-		justify-content: flex-start;
-	}
-
-	.header-main {
-		grid-row: 3;
-	}
 }

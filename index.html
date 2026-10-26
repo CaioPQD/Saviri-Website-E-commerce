@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="js/animated-banner.js" defer></script>
     <script src="js/header-actions.js" defer></script>
+    <script src="js/header-menu.js" defer></script>
     <script src="js/header-scroll.js" defer></script>
+    <script src="js/footer-logo-animation.js" defer></script>
     <script src="js/hero-button-effects.js" defer></script>
     <script src="js/club-benefits-effects.js" defer></script>
 </head>
@@ -17,41 +19,49 @@
 
         <div class="header-content">
 
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="header-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+
             <a class="brand" href="index.html" aria-label="Saviri, página inicial">
                 <img src="img/header-logo_Image.png" alt="Saviri Cafés Especiais">
             </a>
 
-            <div class="header-main">
-                <search class="site-search">
-                    <form action="/buscar" method="get">
-                        <input type="search" id="campo-busca" name="q" placeholder="O que você procura?" aria-label="O que você procura?">
-                        <button type="submit" aria-label="Buscar">
-                            <img src="img/icones/search-icon.svg" alt="">
-                        </button>
-                    </form>
-                </search>
+            <div class="header-menu" id="header-menu">
+                <div class="header-actions">
+                    <a href="/conta">
+                        <img src="img/icones/user-icon.svg" alt="">
+                        <span>Minha conta</span>
+                    </a>
+                    <a href="/carrinho">
+                        <img src="img/icones/shopping-cart-icon.svg" alt="">
+                        <span>Carrinho</span>
+                    </a>
+                </div>
 
-                <nav class="main-navigation" aria-label="Navegação principal">
-                    <ul>
-                        <li><a href="Pagina-cafes">Cafés</a></li>
-                        <li><a href="Pagina-kits">Kits</a></li>
-                        <li><a href="Pagina-métodos">Métodos</a></li>
-                        <li><a href="Pagina-acessorios">Acessórios</a></li>
-                        <li><a href="Pagina-clube">Clube Saviri</a></li>
-                        <li><a href="Pagina-Aprenda">Aprenda</a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="header-main">
+                    <search class="site-search">
+                        <form action="/buscar" method="get">
+                            <input type="search" id="campo-busca" name="q" placeholder="O que você procura?" aria-label="O que você procura?">
+                            <button type="submit" aria-label="Buscar">
+                                <img src="img/icones/search-icon.svg" alt="">
+                            </button>
+                        </form>
+                    </search>
 
-            <div class="header-actions">
-                <a href="/conta">
-                    <img src="img/icones/user-icon.svg" alt="">
-                    <span>Minha conta</span>
-                </a>
-                <a href="/carrinho">
-                    <img src="img/icones/shopping-cart-icon.svg" alt="">
-                    <span>Carrinho</span>
-                </a>
+                    <nav class="main-navigation" aria-label="Navegação principal">
+                        <ul>
+                            <li><a href="Pagina-cafes">Cafés</a></li>
+                            <li><a href="Pagina-kits">Kits</a></li>
+                            <li><a href="Pagina-métodos">Métodos</a></li>
+                            <li><a href="Pagina-acessorios">Acessórios</a></li>
+                            <li><a href="Pagina-clube">Clube Saviri</a></li>
+                            <li><a href="Pagina-Aprenda">Aprenda</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
         </div>
@@ -193,8 +203,6 @@
                         <a href="">Politica de privacidade</a>
                     </li>
                 </ul>
-                
-                
             </section>
 
             <nav class="footer-column" aria-label="Navegação do rodapé">
@@ -218,7 +226,7 @@
             </section>
 
             <section class="footer-logo">
-                <img src="/img/footer-logo.jpeg" alt="Saviri - cafes especiais">
+                <img src="/img/footer-logo-circulo-transparente.png" alt="Saviri - cafes especiais">
                 <div class="footer-social-links" aria-label="Redes sociais">
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <img src="img/icones/instagram.svg" alt="">
