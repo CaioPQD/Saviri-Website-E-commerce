@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saviri - Cafes Especiais - Inicio</title>
+    <title>Saviri - Cafés Especiais - Início</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Scripts mantidos intactos -->
     <script src="js/animated-banner.js" defer></script>
     <script src="js/header-actions.js" defer></script>
     <script src="js/header-menu.js" defer></script>
     <script src="js/header-scroll.js" defer></script>
     <script src="js/footer-logo-animation.js" defer></script>
     <script src="js/hero-button-effects.js" defer></script>
+    <script src="js/hero-carousel.js" defer></script>
     <script src="js/club-benefits-effects.js" defer></script>
 </head>
 <body>
 
     <header class="site-header">
-
         <div class="header-content">
-
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="header-menu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -32,11 +32,11 @@
             <div class="header-menu" id="header-menu">
                 <div class="header-actions">
                     <a href="/conta">
-                        <img src="img/icones/user-icon.svg" alt="">
+                        <img src="img/icones/user-icon.svg" alt="" aria-hidden="true">
                         <span>Minha conta</span>
                     </a>
                     <a href="/carrinho">
-                        <img src="img/icones/shopping-cart-icon.svg" alt="">
+                        <img src="img/icones/shopping-cart-icon.svg" alt="" aria-hidden="true">
                         <span>Carrinho</span>
                     </a>
                 </div>
@@ -46,7 +46,7 @@
                         <form action="/buscar" method="get">
                             <input type="search" id="campo-busca" name="q" placeholder="O que você procura?" aria-label="O que você procura?">
                             <button type="submit" aria-label="Buscar">
-                                <img src="img/icones/search-icon.svg" alt="">
+                                <img src="img/icones/search-icon.svg" alt="" aria-hidden="true">
                             </button>
                         </form>
                     </search>
@@ -55,28 +55,92 @@
                         <ul>
                             <li><a href="Pagina-cafes">Cafés</a></li>
                             <li><a href="Pagina-kits">Kits</a></li>
-                            <li><a href="Pagina-métodos">Métodos</a></li>
                             <li><a href="Pagina-acessorios">Acessórios</a></li>
                             <li><a href="Pagina-clube">Clube Saviri</a></li>
-                            <li><a href="Pagina-Aprenda">Aprenda</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-
         </div>
-        
     </header>
 
     <main>
-        <section class="main-content-area1" aria-labelledby="hero-title">
-            <div class="hero-copy">
-                <h1 id="hero-title">Café bom<br>não precisa ser<br>complicado.</h1>
-                <p>Descubra cafés especiais selecionados e tudo que você precisa para preparar uma xícara melhor em casa.</p>
-                <a class="hero-button" href="Pagina-cafes">Conheça nossos cafés<img src="/img/icones/right-arrow-svgrepo-com (black).svg"></a>
+        <!-- Seção Hero Principal -->
+        <section class="section-hero" aria-label="Destaques Saviri" aria-roledescription="carrossel">
+            <article class="hero-slide hero-slide--intro is-active" aria-hidden="false">
+                <div class="section-hero__content">
+                    <h1 id="hero-title" class="section-title">Quatro perfis.</h1>
+                    <h1 class="section-title section-title--single-line">Um mesmo<br class="hero-title-mobile-break"> propósito.</h1>
+                    <hr class="line-hero">
+                    <p class="section-desc">Encontre o café que combina<br>com seu momento.</p>
+                    <a class="button button--white hero-button" href="Pagina-cafes">
+                        Conheça nossos cafés
+                        <img src="/img/icones/right-arrow-svgrepo-com.svg" alt="" aria-hidden="true">
+                    </a>
+                </div>
+            </article>
+
+            <article class="hero-slide hero-slide--coffee hero-slide--classico" aria-hidden="true" inert>
+                <div class="hero-slide__content">
+                    <!-- Edite o título do slide Café Clássico aqui. -->
+                    <h1 class="section-title">Café Clássico</h1>
+                    <!-- Edite a descrição do Café Clássico aqui. -->
+                    <p class="section-desc">Uma torra escura e envolvente, com notas marcantes de caramelo e chocolate para uma xícara intensa e acolhedora.</p>
+                    <!-- Edite o texto ou o destino do botão do Café Clássico aqui. -->
+                    <a class="button button--white hero-button hero-product-button" href="Pagina-cafes">Comprar</a>
+                </div>
+            </article>
+
+            <article class="hero-slide hero-slide--coffee hero-slide--suave" aria-hidden="true" inert>
+                <div class="hero-slide__content">
+                    <!-- Edite o título do slide Café Suave aqui. -->
+                    <h1 class="section-title">Café Suave</h1>
+                    <!-- Edite a descrição do Café Suave aqui. -->
+                    <p class="section-desc">De torra média e perfil delicado, revela notas de chocolate em equilíbrio com um final cítrico e luminoso.</p>
+                    <!-- Edite o texto ou o destino do botão do Café Suave aqui. -->
+                    <a class="button button--white hero-button hero-product-button" href="Pagina-cafes">Comprar</a>
+                </div>
+            </article>
+
+            <article class="hero-slide hero-slide--coffee hero-slide--canela" aria-hidden="true" inert>
+                <div class="hero-slide__content">
+                    <!-- Edite o título do slide Café Canela aqui. -->
+                    <h1 class="section-title">Café Canela</h1>
+                    <!-- Edite a descrição do Café Canela aqui. -->
+                    <p class="section-desc">A doçura natural da canela encontra notas de caramelo em uma combinação aromática, macia e surpreendente.</p>
+                    <!-- Edite o texto ou o destino do botão do Café Canela aqui. -->
+                    <a class="button button--white hero-button hero-product-button" href="Pagina-cafes">Comprar</a>
+                </div>
+            </article>
+
+            <article class="hero-slide hero-slide--coffee hero-slide--microlote" aria-hidden="true" inert>
+                <div class="hero-slide__content">
+                    <!-- Edite o título do slide Microlote aqui. -->
+                    <h1 class="section-title">Microlote Saviri</h1>
+                    <!-- Edite a descrição do Microlote aqui. -->
+                    <p class="section-desc">Um microlote de 86 pontos SCA, com notas elegantes de cacau e melão e um final cítrico memorável.</p>
+                    <!-- Edite o texto ou o destino do botão do Microlote aqui. -->
+                    <a class="button button--white hero-button hero-product-button" href="Pagina-cafes">Comprar</a>
+                </div>
+            </article>
+
+            <button class="hero-carousel-control hero-carousel-control--previous" type="button" aria-label="Slide anterior">
+                <span aria-hidden="true"></span>
+            </button>
+            <button class="hero-carousel-control hero-carousel-control--next" type="button" aria-label="Próximo slide">
+                <span aria-hidden="true"></span>
+            </button>
+
+            <div class="hero-carousel-pagination" aria-label="Páginas do carrossel">
+                <button class="hero-carousel-dot is-active" type="button" aria-label="Página 1: apresentação Saviri" aria-current="true"></button>
+                <button class="hero-carousel-dot" type="button" aria-label="Página 2: Café Clássico" aria-current="false"></button>
+                <button class="hero-carousel-dot" type="button" aria-label="Página 3: Café Suave" aria-current="false"></button>
+                <button class="hero-carousel-dot" type="button" aria-label="Página 4: Café Canela" aria-current="false"></button>
+                <button class="hero-carousel-dot" type="button" aria-label="Página 5: Microlote Saviri" aria-current="false"></button>
             </div>
         </section>
 
+        <!-- Banner Animado de Benefícios -->
         <section id="animated-banner" aria-label="Benefícios Saviri">
             <div class="banner-track" aria-live="polite" aria-atomic="true">
                 <div class="banner-message is-active" aria-hidden="false">
@@ -98,115 +162,79 @@
             </div>
         </section>
 
-        <section class="main-content-area2" aria-labelledby="hero-title">
-            <div class="hero-copy2">
-                <h1 id="hero-title2">Quatro perfis.<br> Um mesmo<br>propósito.</h1>
-                <hr class="line-ajust">
-                <p>Experiências únicas em cada xícara, para todos os momentos do seu dia</p>
-            </div>
-        </section>
-
-
-        <hr class="line-ajust3">
-        <section class="main-content-area3">
-
-            <div class="hero-copy3">
-                <h2 class="hero-title3">
-                    CLUBE SAVIRI
-                </h2>
-                <p>
-                    Receba café especial todo mês
-                </p>
-            <hr class="line-ajust2">
-            <p class="p-bottom">Mais sabor, mais descobertas</p>
-            <p class="p-bottom-space">e benefícios exclusivos.</p>
-            <a class="hero-button2" href="Pagina-clube">CONHEÇA O CLUBE<img src="/img/icones/right-arrow-svgrepo-com.svg" alt=""></a>
+        <!-- Seção Clube Saviri -->
+        <section class="section-club">
+            <div class="section-club__header">
+                <h2 class="section-title section-club__title">CLUBE SAVIRI</h2>
+                <p class="section-club__subtitle">Receba café especial todo mês</p>
+                
+                <hr class="divider divider--small divider--center">
+                
+                <p class="section-club__desc section-club__desc--spaced">Mais sabor, mais descobertas</p>
+                <p class="section-club__desc">e benefícios exclusivos.</p>
+                
+                <a class="button button--dark hero-button2" href="Pagina-clube">
+                    CONHEÇA O CLUBE
+                    <img src="/img/icones/right-arrow-svgrepo-com.svg" alt="" aria-hidden="true">
+                </a>
             </div>
 
             <div class="club-highlights">
-                <div class="club-highlights1">
-                <img src="/img/icones/coffee-cup.svg" alt="copo-de-cafe">
-                <h3 class="highlight-title1">
-                    Essencial
-                </h3>
-                <p>
-                    1 café por mês
-                </p>
+                <div class="club-card club-highlights1">
+                    <img src="/img/icones/coffee-cup.svg" alt="Copo de café">
+                    <h3>Essencial</h3>
+                    <p>1 café por mês</p>
                 </div>
 
-                <div class="club-highlights2">
-                    <img src="/img/icones/seeds.svg" alt="sementes-cafe">
-                    <h3 class="highlight-title2">
-                        Descoberta
-                    </h3>
-                    <p>
-                        2 cafés por mês
-                    </p>
+                <div class="club-card club-highlights2">
+                    <img src="/img/icones/seeds.svg" alt="Sementes de café">
+                    <h3>Descoberta</h3>
+                    <p>2 cafés por mês</p>
                 </div>
 
-                <div class="club-highlights3">
-                    <img src="/img/icones/gift.svg" alt="Encomenda-presente">
-                    <h3 class="highlight-title3">
-                        Experince
-                    </h3>
-                    <p class="highlight-P3">
-                        Seleções especiais 
-                    </p>
-                    <p class="highlight-P3">
-                        + beneficios
-                    </p>
+                <div class="club-card club-highlights3">
+                    <img src="/img/icones/gift.svg" alt="Encomenda presente">
+                    <h3>Experience</h3>
+                    <p>Seleções especiais</p>
+                    <p>+ benefícios</p>
                 </div>
             </div>
-            
         </section>
-        <hr class="line-ajust4">
 
+        <hr class="divider divider--full">
 
-        <section class="main-content-area4">
-            <div class="hero-copy4">
-                <h1>
-                    KIT SAVIRI 
-                </h1>
-                <h2>
-                    PRIMEIRO CAFÉ ESPECIAL
-                </h2>
-                <P>
+        <!-- Seção Kit Saviri -->
+        <section class="section-kit">
+            <div class="section-kit__content">
+                <h1 class="section-kit__title">KIT SAVIRI</h1>
+                <h2 class="section-kit__subtitle">PRIMEIRO CAFÉ ESPECIAL</h2>
+                <p class="section-kit__desc">
                     Tudo o que você precisa pra começar<br>
                     sua jornada no café especial.
-                </P>
-                <ul>
-                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="">1 café Saviri 250g</li>
-                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="">1 V60</li>
-                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="">1 pacote de filtros</li>
-                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="">1 guia simples de preparo</li>
+                </p>
+                <ul class="section-kit__list">
+                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="" aria-hidden="true"> 1 café Saviri 250g</li>
+                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="" aria-hidden="true"> 1 V60</li>
+                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="" aria-hidden="true"> 1 pacote de filtros</li>
+                    <li><img src="/img/icones/checked-success-svgrepo-com.svg" alt="" aria-hidden="true"> 1 guia simples de preparo</li>
                 </ul>
-                <a class="hero-button4" href="#">VER KIT<img src="/img/icones/right-arrow-svgrepo-com (black).svg"></a>
+                <a class="button button--white hero-button4" href="#">
+                    VER KIT
+                    <img src="/img/icones/right-arrow-svgrepo-com (black).svg" alt="" aria-hidden="true">
+                </a>
             </div>
         </section>
-        <hr class="line-ajust4">
 
-        <footer class="site-footer">
-            <div class="footer-content">
-            <section class="footer-brand">
-                <h2>Saviri - Cafés Especiais</h2>
-                <ul>
-                    <li>
-                        <a href="">Sobre nós</a>
-                    </li>
-                    <li>
-                        <a href="">Nossos produtos</a>
-                    </li>
-                    <li>
-                        <a href="">Troca & Devolução</a>
-                    </li>
-                    <li>
-                        <a href="">Politica de privacidade</a>
-                    </li>
-                </ul>
-            </section>
+        <hr class="divider divider--full">
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="footer-content">
 
             <nav class="footer-column" aria-label="Navegação do rodapé">
-                <h3>Explore</h3>
+                <h3>Saviri</h3>
                 <ul>
                     <li><a href="index.html">Página inicial</a></li>
                     <li><a href="#">Clube Saviri</a></li>
@@ -220,20 +248,21 @@
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Entrega</a></li>
                     <li><a href="#">Status do pedido</a></li>
+                    <li><a href="">Troca & Devolução</a></li>
                     <li><a href="mailto:contato@saviri.com.br">contato@saviri.com.br</a></li>
                     <li><a href="#">Envie uma mensagem</a></li>
                 </ul>
             </section>
 
             <section class="footer-logo">
-                <img src="/img/footer-logo-circulo-transparente.png" alt="Saviri - cafes especiais">
+                <img src="/img/footer-logo-circulo-transparente.png" alt="Saviri - cafés especiais">
                 <div class="footer-social-links" aria-label="Redes sociais">
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <img src="img/icones/instagram.svg" alt="">
+                        <img src="img/icones/instagram.svg" alt="" aria-hidden="true">
                         <span>Instagram</span>
                     </a>
                     <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <img src="img/icones/linkedin.svg" alt="">
+                        <img src="img/icones/linkedin.svg" alt="" aria-hidden="true">
                         <span>LinkedIn</span>
                     </a>
                 </div>
@@ -241,10 +270,9 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Saviri - Marca independe. Conteúdo e identidade visual protegido por direitos autorais.</p>
+            <p>© 2026 Saviri - Marca independente. Conteúdo e identidade visual protegidos por direitos autorais.</p>
         </div>
     </footer>
-    </main>
 
 </body>
 </html>
